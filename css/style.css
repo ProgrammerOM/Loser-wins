@@ -1,0 +1,44 @@
+#myTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#myTable img {
+    max-width: 50px;
+    /* Adjust the width as needed */
+    max-height: 50px;
+    /* Adjust the height as needed */
+}
+
+#myTable th {
+    font-size: clamp(0.7rem, calc(0.7rem + ((1vw - 0.48rem) * 0.1389)), 0.8rem);
+    background-color: #282A2E;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+#myTable th:first-child {
+    border-top-left-radius: 5px;
+}
+
+#myTable th:last-child {
+    border-top-right-radius: 5px;
+}
+
+#myTable td {
+    background-color: #3BA419;
+    padding: 10px;
+    font-size: clamp(0.9rem, calc(0.9rem + ((1vw - 0.48rem) * 0.1389)), 1rem);
+    text-align: center;
+    color: #fff;
+}
+
+#myTable tr:nth-child(even) td {
+    background-color: #17191A;
+
+}
+
+#myTable td {
+    padding: 5px;
+}
