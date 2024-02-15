@@ -57,4 +57,3 @@ setInterval(() => {
   RandomTable();
   RandomImage();
 }, 1000);
-// s
