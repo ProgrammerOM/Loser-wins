@@ -35,8 +35,27 @@ function RandomImage() {
   }
 }
 
-function Randomnum() {
-  let randomNumber = Math.floor(Math.random() * 900) + 100;
+function RandomDeposit() {
+  var min = 500;
+  var max = 10000;
+
+  // คำนวณจำนวนของตัวเลขที่มีทั้งหมด
+  var numberOfValues = Math.floor((max - min) / 100) + 1;
+
+  // สุ่มตัวเลข
+  var randomNumber = min + Math.floor(Math.random() * numberOfValues) * 100
+  return randomNumber;
+}
+
+function RandomWithdraw() {
+  var min = 1000;
+  var max = 100000;
+
+  // คำนวณจำนวนของตัวเลขที่มีทั้งหมด
+  var numberOfValues = Math.floor((max - min) / 100) + 1;
+
+  // สุ่มตัวเลข
+  var randomNumber = min + Math.floor(Math.random() * numberOfValues) * 100
   return randomNumber;
 }
 
@@ -44,9 +63,9 @@ function RandomTable() {
   let table = document.getElementById("myTable");
   let row = table.insertRow(1);
   row.insertCell(0).appendChild(RandomImage());
-  row.insertCell(1).innerHTML = RandomNumber();
-  row.insertCell(2).innerHTML = Randomnum();
-  row.insertCell(3);
+  row.insertCell(1).innerHTML = RandomNumber().toLocaleString();
+  row.insertCell(2).innerHTML = RandomDeposit().toLocaleString();
+  row.insertCell(3).innerHTML = RandomWithdraw().toLocaleString();
 
   if (table.rows.length > 5) {
     table.deleteRow(table.rows.length - 1);
@@ -56,4 +75,4 @@ function RandomTable() {
 setInterval(() => {
   RandomTable();
   RandomImage();
-}, 1000);
+}, 5000);
