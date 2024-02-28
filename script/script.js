@@ -150,8 +150,9 @@ function RandomTable() {
   row.insertCell(0).appendChild(RandomImage());
   row.insertCell(1).innerHTML = RandomNumber().toLocaleString();
 
-  let Deposit = getRandomUniqueNumber(100, 10000, 100);
-  let Withdraw = getRandomUniqueNumber(100, 10000, 100);
+
+  let Deposit = getRandomUniqueNumber(100, 10000, 200);
+  let Withdraw = getRandomUniqueNumber(500, 100000, 500);
 
   row.insertCell(2).innerHTML = Deposit.toLocaleString();
 
